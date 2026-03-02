@@ -3,8 +3,8 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
     { name: 'Ibu Arisan', role: 'Kebayoran Lama', text: 'Tamu-tamu arisan pada kaget karena pempeknya besar banget tapi rasanya beneran kerasa ikan sungguhan. Cukonya juga pas banget pedes manisnya!' },
-    { name: 'Mas Pengantin', role: 'Wedding Event', text: 'Awalnya ragu pesan gerobakan buat nikahan, ternyata booth pempek ini yang paling rame dan pertama habis. Tamu pada suka banget sama idenya.' },
-    { name: 'Pak Rudi (Reseller)', role: 'Agen Komplek', text: 'Alhamdulillah jualan ini di depan sekolah SD laku keras. Modal kecil muter cepat, gerobaknya juga gampang dikenalin pakai warna kuning merah.' },
+    { name: 'Mas Pengantin', role: 'Wedding Event', text: 'Awalnya ragu pesan sepeda keliling buat nikahan, ternyata booth pempek ini yang paling rame dan pertama habis. Tamu pada suka banget sama idenya.' },
+    { name: 'Pak Rudi (Reseller)', role: 'Agen Komplek', text: 'Alhamdulillah jualan ini di depan sekolah SD laku keras. Modal kecil muter cepat, sepedanya juga gampang dikenalin pakai warna kuning merah.' },
     { name: 'Adit', role: 'Siswa SMA', text: 'Jajan setiap pulang sekolah, cuma modal 10 ribu udah dapet 4 biji + cukonya enak banget diminum. Gak ada obat!' }
 ];
 

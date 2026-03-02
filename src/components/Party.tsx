@@ -23,7 +23,7 @@ const Party: React.FC = () => {
                     </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '4rem', paddingTop: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '4rem', marginTop: '4rem' }}>
                     {pricingTiers.map((tier, idx) => (
                         <div key={idx} style={{
                             backgroundColor: 'white',
