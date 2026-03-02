@@ -50,7 +50,7 @@ const Party: React.FC = () => {
 
                             <ul style={{ listStyle: 'none', padding: 0, margin: 0, flex: 1, display: 'flex', flexDirection: 'column', gap: '1rem', color: 'var(--color-gray-800)' }}>
                                 <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--color-gray-100)', paddingBottom: '0.5rem' }}><span>Jumlah</span> <strong>{tier.qty}</strong></li>
-                                <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--color-gray-100)', paddingBottom: '0.5rem' }}><span>Fasilitas</span> <strong>{tier.gerobak}</strong></li>
+                                <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--color-gray-100)', paddingBottom: '0.5rem' }}><span>Fasilitas</span> <strong>{tier.sepeda}</strong></li>
                                 <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--color-gray-100)', paddingBottom: '0.5rem' }}><span>Pelayanan</span> <strong>{tier.penjaga}</strong></li>
                                 <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--color-gray-100)', paddingBottom: '0.5rem' }}><span>Durasi</span> <strong>{tier.duration}</strong></li>
                             </ul>
