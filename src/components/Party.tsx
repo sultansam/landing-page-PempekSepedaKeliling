@@ -3,10 +3,10 @@ import { PartyPopper } from 'lucide-react';
 import partyImg from '../assets/pempek_party_1772382737880.png';
 
 const pricingTiers = [
-    { name: 'Paket Seru', price: 'Rp 1.600.000', qty: '500 pcs', gerobak: '1 gerobak', penjaga: '1 penjaga', duration: '3 jam', icon: '🎉' },
-    { name: 'Paket Meriah', price: 'Rp 2.225.000', qty: '750 pcs', gerobak: '1 gerobak', penjaga: '1 penjaga', duration: '3 jam', icon: '🎊', popular: true },
-    { name: 'Paket Grand', price: 'Rp 3.050.000', qty: '1.000 pcs', gerobak: '1 gerobak', penjaga: '2 penjaga', duration: '3 jam', icon: '🏆' },
-    { name: 'Paket Mewah', price: 'Rp 5.850.000', qty: '2.000 pcs', gerobak: '2 gerobak', penjaga: '3 penjaga', duration: '3 jam', icon: '💎' }
+    { name: 'Paket Seru', price: 'Rp 1.600.000', qty: '500 pcs', sepeda: '1 sepeda', penjaga: '1 penjaga', duration: '3 jam', icon: '🎉' },
+    { name: 'Paket Meriah', price: 'Rp 2.225.000', qty: '750 pcs', sepeda: '1 sepeda', penjaga: '1 penjaga', duration: '3 jam', icon: '🎊', popular: true },
+    { name: 'Paket Grand', price: 'Rp 3.050.000', qty: '1.000 pcs', sepeda: '1 sepeda', penjaga: '2 penjaga', duration: '3 jam', icon: '🏆' },
+    { name: 'Paket Mewah', price: 'Rp 5.850.000', qty: '2.000 pcs', sepeda: '2 sepeda', penjaga: '3 penjaga', duration: '3 jam', icon: '💎' }
 ];
 
 const Party: React.FC = () => {
@@ -19,11 +19,11 @@ const Party: React.FC = () => {
                         Bikin Acara Makin Seru dengan Party Pempek
                     </h2>
                     <p style={{ fontSize: '1.25rem', color: 'var(--color-gray-500)', lineHeight: 1.6 }}>
-                        Dari arisan sederhana sampai pesta pernikahan, gerobak pempek kami siap jadi pusat perhatian dan bikin tamu tersenyum bahagia.
+                        Dari arisan sederhana sampai pesta pernikahan, sepeda pempek kami siap jadi pusat perhatian dan bikin tamu tersenyum bahagia.
                     </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '4rem', paddingTop: '2rem' }}>
                     {pricingTiers.map((tier, idx) => (
                         <div key={idx} style={{
                             backgroundColor: 'white',
