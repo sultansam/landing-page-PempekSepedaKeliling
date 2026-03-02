@@ -5,7 +5,7 @@ import heroImg from '../assets/hero_gerobak_1772382699306.png'; // Make sure the
 const Hero: React.FC = () => {
   return (
     <section className="hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
-      <div 
+      <div
         style={{
           position: 'absolute',
           top: 0,
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
           zIndex: -2,
         }}
       />
-      <div 
+      <div
         style={{
           position: 'absolute',
           top: 0,
@@ -42,18 +42,18 @@ const Hero: React.FC = () => {
           <p style={{ fontSize: '1.125rem', marginBottom: '2.5rem', opacity: 0.9, lineHeight: 1.6 }}>
             Setiap hari kami berkeliling membawa satu tujuan sederhana — menghadirkan pempek enak dengan harga yang semua orang bisa nikmati. Dari anak sekolah sampai acara pernikahan.
           </p>
-          
+
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button className="btn btn-primary">
+            <a href="https://wa.me/6281779812060?text=Halo%20saya%20tertarik%20pesan%20pempek" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               <Utensils size={20} />
               Pesan Sekarang
-            </button>
-            <button className="btn btn-secondary">
+            </a>
+            <a href="https://wa.me/6281779812060?text=Halo%20saya%20mau%20tanya%20booking%20party%20pempek" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
               Booking Party Pempek
-            </button>
-            <button className="btn btn-outline" style={{ color: 'var(--color-light)', borderColor: 'var(--color-light)' }}>
+            </a>
+            <a href="https://wa.me/6281779812060?text=Halo%20saya%20mau%20gabung%20reseller" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ color: 'var(--color-light)', borderColor: 'var(--color-light)' }}>
               Jadi Reseller <ArrowRight size={20} />
-            </button>
+            </a>
           </div>
         </div>
       </div>

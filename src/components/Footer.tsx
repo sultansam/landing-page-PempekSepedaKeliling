@@ -13,9 +13,9 @@ const Footer: React.FC = () => {
                 </p>
 
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '4rem' }}>
-                    <a href="#" style={{ color: 'white', opacity: 0.8, transition: 'opacity 0.2s' }}>Instagram</a>
-                    <a href="#" style={{ color: 'white', opacity: 0.8, transition: 'opacity 0.2s' }}>WhatsApp</a>
-                    <a href="#" style={{ color: 'white', opacity: 0.8, transition: 'opacity 0.2s' }}>Tiktok</a>
+                    <a href="https://wa.me/6281779812060" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8, transition: 'opacity 0.2s' }}>Instagram</a>
+                    <a href="https://wa.me/6281779812060" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8, transition: 'opacity 0.2s' }}>WhatsApp</a>
+                    <a href="https://wa.me/6281779812060" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8, transition: 'opacity 0.2s' }}>Tiktok</a>
                 </div>
 
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', fontSize: '0.875rem', opacity: 0.6 }}>
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Sticky WhatsApp CTA */}
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="whatsapp-float">
+            <a href="https://wa.me/6281779812060" target="_blank" rel="noopener noreferrer" className="whatsapp-float">
                 <MessageCircle fill="#FFF" size={32} />
             </a>
         </footer>

@@ -32,9 +32,9 @@ const Reseller: React.FC = () => {
                 </div>
 
                 <div style={{ textAlign: 'center' }}>
-                    <button className="btn btn-secondary" style={{ fontSize: '1.25rem', padding: '1rem 2.5rem' }}>
+                    <a href="https://wa.me/6281779812060?text=Halo%20saya%20mau%20gabung%20jadi%20reseller" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ fontSize: '1.25rem', padding: '1rem 2.5rem', display: 'inline-flex' }}>
                         Gabung Jadi Reseller Sekarang
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>

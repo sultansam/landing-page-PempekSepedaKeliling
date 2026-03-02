@@ -48,9 +48,9 @@ const Products: React.FC = () => {
                         </div>
 
                         <div>
-                            <button className="btn btn-primary" style={{ width: 'fit-content' }}>
+                            <a href="https://wa.me/6281779812060?text=Halo%20saya%20mau%20lihat%20menu%20lengkap" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: 'fit-content', display: 'inline-flex' }}>
                                 Lihat Menu Lengkap
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -55,9 +55,9 @@ const Party: React.FC = () => {
                                 <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--color-gray-100)', paddingBottom: '0.5rem' }}><span>Durasi</span> <strong>{tier.duration}</strong></li>
                             </ul>
 
-                            <button className={`btn mt-8 w-full ${tier.popular ? 'btn-primary' : 'btn-outline'}`} style={{ marginTop: '2rem', width: '100%' }}>
+                            <a href="https://wa.me/6281779812060?text=Halo%20saya%20tertarik%20dengan%20paket%20party%20pempek" target="_blank" rel="noopener noreferrer" className={`btn mt-8 w-full ${tier.popular ? 'btn-primary' : 'btn-outline'}`} style={{ marginTop: '2rem', width: '100%', boxSizing: 'border-box' }}>
                                 Pilih Paket
-                            </button>
+                            </a>
                         </div>
                     ))}
                 </div>
@@ -67,9 +67,9 @@ const Party: React.FC = () => {
                 </div>
 
                 <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-                    <button className="btn btn-primary" style={{ fontSize: '1.25rem', padding: '1rem 3rem' }}>
+                    <a href="https://wa.me/6281779812060?text=Halo%20saya%20mau%20booking%20party%20pempek" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '1.25rem', padding: '1rem 3rem', display: 'inline-flex' }}>
                         Booking Party Sekarang
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
