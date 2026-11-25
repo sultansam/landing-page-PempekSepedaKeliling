@@ -1,40 +1,66 @@
-import React from 'react';
-import { Star } from 'lucide-react';
+import { useState } from "react";
+import { ChevronDown, Star } from "lucide-react";
+import { FAQ, TESTIMONIALS } from "../content";
 
-const testimonials = [
-    { name: 'Ibu Arisan', role: 'Kebayoran Lama', text: 'Tamu-tamu arisan pada kaget karena pempeknya besar banget tapi rasanya beneran kerasa ikan sungguhan. Cukonya juga pas banget pedes manisnya!' },
-    { name: 'Mas Pengantin', role: 'Wedding Event', text: 'Awalnya ragu pesan sepeda keliling buat nikahan, ternyata booth pempek ini yang paling rame dan pertama habis. Tamu pada suka banget sama idenya.' },
-    { name: 'Pak Rudi (Reseller)', role: 'Agen Komplek', text: 'Alhamdulillah jualan ini di depan sekolah SD laku keras. Modal kecil muter cepat, sepedanya juga gampang dikenalin pakai warna kuning merah.' },
-    { name: 'Adit', role: 'Siswa SMA', text: 'Jajan setiap pulang sekolah, cuma modal 10 ribu udah dapet 4 biji + cukonya enak banget diminum. Gak ada obat!' }
-];
-
-const Testimonials: React.FC = () => {
-    return (
-        <section className="section" style={{ backgroundColor: '#FFFDF9' }}>
-            <div className="container">
-                <h2 className="text-dark text-center" style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '4rem' }}>
-                    Cerita Mereka yang Sudah Coba
-                </h2>
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
-                    {testimonials.map((testi, idx) => (
-                        <div key={idx} style={{ padding: '2rem', backgroundColor: 'white', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--color-gray-100)' }}>
-                            <div style={{ display: 'flex', color: 'var(--color-primary)', marginBottom: '1rem' }}>
-                                {[...Array(5)].map((_, i) => <Star key={i} size={20} fill="currentColor" />)}
-                            </div>
-                            <p style={{ color: 'var(--color-gray-800)', fontSize: '1.125rem', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-                                "{testi.text}"
-                            </p>
-                            <div>
-                                <p style={{ fontWeight: 800, color: 'var(--color-dark)' }}>{testi.name}</p>
-                                <p style={{ color: 'var(--color-gray-500)', fontSize: '0.875rem' }}>{testi.role}</p>
-                            </div>
-                        </div>
-                    ))}
+export default function Testimonials() {
+  return (
+    <section className="section" aria-labelledby="testimoni">
+      <div className="container">
+        <div className="section__head reveal">
+          <span className="eyebrow">Kata mereka</span>
+          <h2 id="testimoni">Cerita mereka yang sudah coba</h2>
+        </div>
+        <ul className="testimonials">
+          {TESTIMONIALS.map((item) => (
+            <li className="testimonial reveal" key={item.name}>
+              <div className="testimonial__stars" aria-label="5 dari 5 bintang">
+                {Array.from({ length: 5 }, (_, index) => <Star key={index} size={16} fill="currentColor" />)}
+              </div>
+              <p>“{item.text}”</p>
+              <div className="testimonial__who">
+                <span className="testimonial__avatar" aria-hidden="true">{item.name.charAt(0)}</span>
+                <div>
+                  <strong>{item.name}</strong>
+                  <span>{item.role}</span>
                 </div>
-            </div>
-        </section>
-    );
-};
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
 
-export default Testimonials;
+export function Faq() {
+  const [open, setOpen] = useState<number | null>(0);
+  return (
+    <section className="section section--cream" id="faq">
+      <div className="container faq">
+        <div className="section__head section__head--left reveal">
+          <span className="eyebrow">FAQ</span>
+          <h2>Yang sering ditanyakan</h2>
+          <p>Belum ketemu jawabannya? Tanya langsung lewat WhatsApp, kami balas secepatnya.</p>
+        </div>
+        <div className="faq__list">
+          {FAQ.map((item, index) => {
+            const isOpen = open === index;
+            return (
+              <div className={`faq__item ${isOpen ? "is-open" : ""}`} key={item.q}>
+                <h3>
+                  <button type="button" aria-expanded={isOpen} aria-controls={`faq-${index}`} onClick={() => setOpen(isOpen ? null : index)}>
+                    {item.q}
+                    <ChevronDown className="faq__chevron" size={20} />
+                  </button>
+                </h3>
+                <div id={`faq-${index}`} className="faq__answer" role="region" hidden={!isOpen}>
+                  <p>{item.a}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

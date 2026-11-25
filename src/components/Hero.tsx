@@ -1,64 +1,48 @@
-import React from 'react';
-import { ArrowRight, Utensils } from 'lucide-react';
-import heroImg from '../assets/hero_gerobak_1772382699306.png'; // Make sure the bundler resolves this
+import { ArrowRight, PartyPopper } from "lucide-react";
+import { waLink } from "../content";
+import { BikeWheel, CukoBowl, PempekAdaan, PempekKapalSelam, PempekLenjer, Sparkle, WaveDivider, WhatsAppIcon } from "./Illustrations";
 
-const Hero: React.FC = () => {
+export default function Hero() {
   return (
-    <section className="hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundImage: `url(${heroImg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          zIndex: -2,
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.65)',
-          zIndex: -1,
-        }}
-      />
-
-      <div className="container animate-fade-in">
-        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', color: 'var(--color-light)' }}>
-          <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 800, marginBottom: '1.5rem', lineHeight: 1.1 }}>
-            Dari Sepeda Keliling, <br />
-            <span className="text-primary">Jadi Favorit Banyak Keluarga.</span>
+    <section className="hero" id="top">
+      <BikeWheel className="hero__wheel hero__wheel--a" />
+      <BikeWheel className="hero__wheel hero__wheel--b" />
+      <div className="container hero__grid">
+        <div className="hero__copy reveal">
+          <span className="eyebrow"><Sparkle className="eyebrow__icon" /> Keliling setiap hari</span>
+          <h1>
+            Dari sepeda keliling,
+            <br />
+            <span className="text-red">jadi favorit keluarga.</span>
           </h1>
-          <p style={{ fontSize: 'clamp(1.125rem, 2.5vw, 1.5rem)', marginBottom: '1.5rem', fontWeight: 500 }}>
-            Pempek besar, enak, harga cuma <span className="text-primary" style={{ fontWeight: 700 }}>Rp 2.500</span>. Karena makan enak tidak harus mahal.
+          <p className="hero__lead">
+            Pempek besar, enak, harga mulai <strong className="price-chip">Rp 2.500</strong>. Karena makan enak tidak harus mahal.
           </p>
-          <p style={{ fontSize: '1.125rem', marginBottom: '2.5rem', opacity: 0.9, lineHeight: 1.6 }}>
-            Setiap hari kami berkeliling membawa satu tujuan sederhana — menghadirkan pempek enak dengan harga yang semua orang bisa nikmati. Dari anak sekolah sampai acara pernikahan.
-          </p>
-
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://wa.me/6281779812060?text=Halo%20saya%20tertarik%20pesan%20pempek" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              <Utensils size={20} />
-              Pesan Sekarang
+          <div className="hero__actions">
+            <a className="btn btn--primary btn--lg" href={waLink("Halo, saya mau pesan pempek")} target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon className="icon" /> Pesan Sekarang
             </a>
-            <a href="https://wa.me/6281779812060?text=Halo%20saya%20mau%20tanya%20booking%20party%20pempek" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-              Booking Party Pempek
-            </a>
-            <a href="https://wa.me/6281779812060?text=Halo%20saya%20mau%20gabung%20reseller" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ color: 'var(--color-light)', borderColor: 'var(--color-light)' }}>
-              Jadi Reseller <ArrowRight size={20} />
+            <a className="btn btn--ghost btn--lg" href="#party">
+              <PartyPopper size={20} /> Party Pempek
             </a>
           </div>
+          <a className="hero__reseller" href="#reseller">Mau jadi reseller? Lihat caranya <ArrowRight size={16} /></a>
+        </div>
+
+        <div className="hero__art reveal reveal--delay">
+          <div className="hero__blob" aria-hidden="true" />
+          <img className="hero__logo" src="/img/logo-640.webp" alt="Maskot Pempek Sepeda Keliling mengendarai sepeda pempek merah" width="520" height="520" />
+          <div className="hero__badge hero__badge--price">
+            <span>mulai</span>
+            <strong>Rp 2.500</strong>
+          </div>
+          <PempekKapalSelam className="float float--a" title="Pempek kapal selam" />
+          <PempekLenjer className="float float--b" title="Pempek lenjer" />
+          <PempekAdaan className="float float--c" title="Pempek adaan" />
+          <CukoBowl className="float float--d" title="Mangkuk cuko" />
         </div>
       </div>
+      <WaveDivider className="hero__wave" />
     </section>
   );
-};
-
-export default Hero;
+}
