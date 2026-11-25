@@ -1,44 +1,44 @@
-import React from 'react';
-import { TrendingUp, Users, Store, HeartHandshake } from 'lucide-react';
+import { HeartHandshake, Megaphone, Store, TrendingUp } from "lucide-react";
+import { RESELLER_BENEFITS, waLink } from "../content";
+import { PempekLenjer, WhatsAppIcon } from "./Illustrations";
 
-const Reseller: React.FC = () => {
-    return (
-        <section className="section" style={{ backgroundColor: 'var(--color-primary)', color: 'var(--color-dark)' }}>
-            <div className="container">
-                <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '700px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>
-                        Bukan Cuma Jualan Pempek, Tapi Bagi Rezeki
-                    </h2>
-                    <p style={{ fontSize: '1.25rem', fontWeight: 500, opacity: 0.9, lineHeight: 1.6 }}>
-                        Kami membuka kesempatan untuk siapa saja yang ingin menambah penghasilan. Banyak mitra kami yang mulai dari kecil, sekarang bisa punya penghasilan tambahan setiap hari.
-                    </p>
-                </div>
+const ICONS = [TrendingUp, Store, Megaphone, HeartHandshake];
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginBottom: '4rem' }}>
-                    {[
-                        { icon: <TrendingUp size={32} className="text-secondary" />, title: 'Margin Menarik', desc: 'Harga khusus reseller yang memberikan keuntungan maksimal untuk Anda.' },
-                        { icon: <Store size={32} className="text-secondary" />, title: 'Mudah Dijual', desc: 'Cocok untuk sekolah, kantor, atau jualan di komplek perumahan.' },
-                        { icon: <Users size={32} className="text-secondary" />, title: 'Support Promosi', desc: 'Kami sediakan banner dan materi promosi untuk membantu jualan Anda.' },
-                        { icon: <HeartHandshake size={32} className="text-secondary" />, title: 'Min. Order Rendah', desc: 'Mulai dengan minimal order 200 pcs, risiko kecil, putaran modal cepat.' }
-                    ].map((benefit, idx) => (
-                        <div key={idx} style={{ backgroundColor: 'white', padding: '2rem', borderRadius: '16px', boxShadow: 'var(--shadow-md)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                            <div style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#FFF5F5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                {benefit.icon}
-                            </div>
-                            <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>{benefit.title}</h3>
-                            <p style={{ color: 'var(--color-gray-500)', lineHeight: 1.5 }}>{benefit.desc}</p>
-                        </div>
-                    ))}
-                </div>
-
-                <div style={{ textAlign: 'center' }}>
-                    <a href="https://wa.me/6281779812060?text=Halo%20saya%20mau%20gabung%20jadi%20reseller" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ fontSize: '1.25rem', padding: '1rem 2.5rem', display: 'inline-flex' }}>
-                        Gabung Jadi Reseller Sekarang
-                    </a>
-                </div>
+export default function Reseller() {
+  return (
+    <section className="section section--dark" id="reseller">
+      <div className="container reseller">
+        <div className="reseller__intro reveal">
+          <span className="eyebrow eyebrow--gold">Peluang usaha</span>
+          <h2>Bukan cuma jualan pempek, tapi bagi rezeki</h2>
+          <p>
+            Kami membuka kesempatan untuk siapa saja yang ingin menambah penghasilan. Banyak mitra kami mulai dari kecil,
+            sekarang punya penghasilan tambahan setiap hari.
+          </p>
+          <div className="reseller__min">
+            <PempekLenjer className="reseller__icon" />
+            <div>
+              <strong>Mulai 200 pcs</strong>
+              <span>Modal kecil, cepat berputar</span>
             </div>
-        </section>
-    );
-};
-
-export default Reseller;
+          </div>
+          <a className="btn btn--gold btn--lg" href={waLink("Halo, saya mau gabung jadi reseller pempek")} target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon className="icon" /> Gabung Jadi Reseller
+          </a>
+        </div>
+        <ul className="benefits">
+          {RESELLER_BENEFITS.map((benefit, index) => {
+            const Icon = ICONS[index];
+            return (
+              <li className="benefit reveal" key={benefit.title}>
+                <span className="benefit__icon"><Icon size={24} /></span>
+                <h3>{benefit.title}</h3>
+                <p>{benefit.text}</p>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </section>
+  );
+}
