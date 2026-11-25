@@ -5,7 +5,7 @@ import { Highlights, HowToOrder, MenuSection } from "./components/Products";
 import Story from "./components/Story";
 import Party from "./components/Party";
 import Reseller from "./components/Reseller";
-import Testimonials, { Faq } from "./components/Testimonials";
+import SocialProof, { Faq } from "./components/Testimonials";
 import Footer, { CtaBanner, FloatingWhatsApp } from "./components/Footer";
 
 /** Animasi muncul saat discroll (dihormati: tidak jalan bila pengguna memilih kurangi animasi). */
@@ -44,7 +44,7 @@ export default function App() {
         <Story />
         <Party />
         <Reseller />
-        <Testimonials />
+        <SocialProof />
         <Faq />
         <CtaBanner />
       </main>
