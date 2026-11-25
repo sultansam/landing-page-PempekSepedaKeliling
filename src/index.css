@@ -278,6 +278,25 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 @media (min-width: 700px) { .testimonials { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } }
 @media (min-width: 1100px) { .testimonials { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
+/* ---------- Konten asli TikTok & Instagram ---------- */
+.social { display: grid; gap: 20px; }
+.social__tiktok { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; box-shadow: var(--shadow-sm); overflow: hidden; min-height: 420px; }
+.social__tiktok .tiktok-embed { width: 100% !important; }
+.social__placeholder { display: grid; place-items: center; min-height: 400px; color: var(--muted); font-weight: 700; }
+.social__cards { display: grid; gap: 12px; align-content: start; }
+.social-card { display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: var(--radius); color: #fff; box-shadow: var(--shadow); transition: transform 0.18s ease; }
+.social-card:hover { transform: translateY(-3px); }
+.social-card--tiktok { background: #111; }
+.social-card--ig { background: linear-gradient(135deg, #F58529 0%, #DD2A7B 50%, #8134AF 100%); }
+.social-card__icon { width: 34px; height: 34px; flex-shrink: 0; }
+.social-card strong { display: block; font-family: var(--font-display); font-size: 20px; }
+.social-card span { font-size: 14px; opacity: 0.9; }
+.social-card div { flex: 1; min-width: 0; }
+.social-card div span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.social-card__cta { background: #fff; color: var(--ink); padding: 8px 16px; border-radius: 999px; font-weight: 800; font-size: 14px !important; opacity: 1 !important; }
+.social__note { color: var(--muted); font-weight: 600; padding: 4px 6px; }
+@media (min-width: 900px) { .social { grid-template-columns: 1.4fr 0.6fr; gap: 28px; } }
+
 /* ---------- FAQ ---------- */
 .faq { display: grid; gap: 8px; }
 .faq__list { display: grid; gap: 10px; }

@@ -76,13 +76,6 @@ export const RESELLER_BENEFITS = [
   { title: "Minimal order rendah", text: "Mulai 200 pcs: risiko kecil, modal cepat berputar." }
 ];
 
-export const TESTIMONIALS = [
-  { name: "Ibu Arisan", role: "Kebayoran Lama", text: "Tamu-tamu arisan pada kaget karena pempeknya besar banget tapi rasanya beneran kerasa ikan sungguhan. Cukonya juga pas banget pedes manisnya!" },
-  { name: "Mas Pengantin", role: "Acara pernikahan", text: "Awalnya ragu pesan sepeda keliling buat nikahan, ternyata booth pempek ini yang paling rame dan pertama habis. Tamu pada suka banget sama idenya." },
-  { name: "Pak Rudi", role: "Reseller komplek", text: "Alhamdulillah jualan ini di depan sekolah SD laku keras. Modal kecil muter cepat, sepedanya juga gampang dikenalin." },
-  { name: "Adit", role: "Siswa SMA", text: "Jajan setiap pulang sekolah, cuma modal 10 ribu udah dapet 4 biji + cukonya enak banget. Gak ada obat!" }
-];
-
 export const FAQ = [
   { q: "Berapa harga pempeknya?", a: "Pempek kecil Rp 2.500 per biji, pempek besar (kapal selam & lenjer besar) Rp 14.000. Disajikan dengan cuko khas kami." },
   { q: "Bisa pesan untuk acara?", a: "Bisa. Pilih Paket Party (500 sampai 2.000 pcs) dan sepeda pempek kami datang ke lokasi acara selama 3 jam. Sebaiknya booking beberapa hari sebelumnya lewat WhatsApp." },
